@@ -41,6 +41,7 @@
                         {{$tags:=getAllTag}}
                         {{range $tag:=$tags}}
                             <a href="#tag-{{$tag.Slug}}"
+                               style="background-color: {{$tag.Color}};"
                                class="text-sm text-black/80 hover:text-black hover:underline hover:font-medium"
                                @mouseenter="handleHighlightTag('${tag.slug!}',true)"
                                @mouseleave="handleHighlightTag('${tag.slug!}',false)">
