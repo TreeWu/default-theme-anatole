@@ -15,7 +15,7 @@
         <link rel="alternate" type="application/rss+xml" title="atom 1.0" href="{{ .atom_url}}"/>
         {{template "global.head" .}}
         {{template "caicai_anatole/module/styles" .}}
-        
+
         {{template "caicai_anatole/module/highlightjs/libs-import" . }}
         {{template "caicai_anatole/module/lightgallery/libs-import" .}}
         {{template  "caicai_anatole/module/katex/libs-import" .}}
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="post-page">
+            <div id="post-page" class="post-page">
                 <div class="post animated fadeInDown">
                     <div id="post-content" class="post-content markdown-body">
                         {{noescape .post.Content}}
@@ -92,6 +92,10 @@
                 <div id="comment_widget" style="margin: 30px;">
                     {{template "global.comment" .}}
                 </div>
+            </div>
+            <div id="post-navigation" class="post-navigation">
+                <div class="post-navigation-title">导航目录</div>
+                <div id="post-navigation-wrapper" class="post-navigation-wrapper"></div>
             </div>
         </div>
     </div>
